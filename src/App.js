@@ -8,8 +8,11 @@ import Header from './components/Shared/Header/Header';
 import Footer from './components/Shared/Footer/Footer';
 import AllDoctors from './components/AllDoctors/AllDoctors';
 import DoctorDetails from './components/DoctorDetails/DoctorDetails';
-import Login from './components/Login/Login';
-import Register from './components/Register/Register';
+import AboutUs from './components/About/AboutUs';
+import ContactUs from './components/ContactUs/ContactUs';
+import AuthProvider from './context/AuthProvider';
+import UsrLoginReg from './components/UserEntry/UsrLoginReg';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 
@@ -17,41 +20,51 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <Header></Header>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
 
-        <Switch>
-          <Route exact path='/'>
-            <Home></Home>
-          </Route>
+          <Switch>
+            <Route exact path='/'>
+              <Home></Home>
+            </Route>
 
-          <Route exact path='/home'>
-            <Home></Home>
-          </Route>
+            <Route exact path='/home'>
+              <Home></Home>
+            </Route>
 
-          <Route exact path='/alldoctors'>
-            <AllDoctors></AllDoctors>
-          </Route>
+            <Route exact path='/alldoctors'>
+              <AllDoctors></AllDoctors>
+            </Route>
 
-          <Route exact path='/alldoctors/:docid'>
-            <DoctorDetails></DoctorDetails>
-          </Route>
+            <PrivateRoute exact path='/alldoctors/:docid'>
+              <DoctorDetails></DoctorDetails>
+            </PrivateRoute>
 
-          <Route exact path='/login'>
-            <Login></Login>
-          </Route>
+            <Route exact path='/login'>
+              <UsrLoginReg></UsrLoginReg>
+            </Route>
 
-          <Route exact path='/register'>
-            <Register></Register>
-          </Route>
+            <Route exact path='/register'>
+              <UsrLoginReg></UsrLoginReg>
+            </Route>
 
-          <Route path='*'>
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
+            <Route exact path='/about'>
+              <AboutUs></AboutUs>
+            </Route>
 
-        <Footer></Footer>
-      </Router>
+            <Route exact path='/contact'>
+              <ContactUs></ContactUs>
+            </Route>
+
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
