@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Col } from 'react-bootstrap';
+import { Button, Card, Col, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CgArrowLongRight } from "react-icons/cg";
 import './SingleServiceDoc.css';
@@ -21,7 +21,7 @@ const SingleServiceDoc = (props) => {
                         <Link className='text-decoration-none text-dark'>
                             <Card.Body>
                                 <Card.Title className='text-start'>
-                                    <h3 className='fs-4 fw-bold'>{doc_name}</h3>
+                                    <h3 className='fs-4 fw-bold'>{doc_name}  <Spinner animation="grow" size="sm" variant="success" /></h3>
 
                                     <small className='category-font text-muted py-5'>{category}</small>
                                 </Card.Title>
