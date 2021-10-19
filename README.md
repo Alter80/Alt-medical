@@ -1,3 +1,22 @@
+# Alt-Medic
+This website is an online health platfrom. 
+
+## website link
+
+Visit the website by clicking this link: [Alt-Medic](https://alt-medical.web.app/)
+
+![alt text](https://i.imgur.com/9LXTrCF.png)
+
+
+
+## functionalities
+* User Can visit this site for visiting doctors
+* User can login and register to the website. 
+* Online Doctors are shown in the homepage but All the doctors list will be shown in the /alldoctors directory. 
+* Also added Contact us and About Us Pages. 
+
+---------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
