@@ -5,8 +5,8 @@ import useAuth from '../../../hooks/useAuth';
 
 
 const Header = () => {
-
     const { goolelogin, user, error, logOut } = useAuth();
+
 
     return (
         <div className='container-fluid'>
@@ -42,6 +42,11 @@ const Header = () => {
                             <Nav.Link><Link className='text-decoration-none text-muted' to="/contact">Contact Us</Link></Nav.Link>
                         </Nav>
 
+                        {
+                            user?.displayName &&
+                            <img src={user?.photoURL} className='rounded-circle me-2' alt="" srcset="" height='45px' />
+                        }
+
 
                         {
                             user?.displayName || <div>
@@ -49,8 +54,9 @@ const Header = () => {
                             </div>
                         }
 
+
                         {
-                            user?.email &&
+                            user?.displayName &&
                             <Button onClick={logOut} className='px-4 mb-2 ms-3 rounded-pill header-btn' variant="outline-primary">LogOut</Button>
                         }
 

@@ -7,7 +7,7 @@ const UsrLoginReg = () => {
     let history = useHistory()
     const { goolelogin, user, error, logOut, handleReigstration, handleEmailchange, handlePasswordChange, handleNameChange, isLogin, toggleLogin, handleResetPassword } = useAuth();
 
-    // console.log(user);
+    console.log(user);
 
     if (user?.emailVerified == true) {
         history.push('/');
