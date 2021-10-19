@@ -1,0 +1,33 @@
+#img_container {
+    position:relative;
+    display:inline-block;
+    text-align:center;
+
+}
+
+.button {
+    position: absolute;
+    bottom: 12%;
+    right: 5%;
+    width: 25%;
+    height: 10%;
+    font-size: 200%;
+    border-radius: 25px;
+}
+
+.button:hover{
+    background-color: hsl(214, 79%, 36%);
+    border: 1px solid rgb(0, 68, 255);
+}
+
+@media screen and (max-width: 900px) and (min-width: 300px){
+    .button {
+        position: absolute;
+        bottom: 5%;
+        right: 3%;
+        width: 35%;
+        height: 20%;
+        font-size: 60%;
+        border-radius: 25px;
+    }
+  }

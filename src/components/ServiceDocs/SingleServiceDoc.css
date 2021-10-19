@@ -1,0 +1,17 @@
+.category-font{
+    font-size: 12px;
+}
+
+.hover-card:hover{
+    transform: translateY(-10px);
+    transition: .5s;
+    box-shadow: 0 20px 30px 0 hsla(216, 90%, 44%, 0.712);
+}
+
+.hover-card{
+    border-radius: 15px;
+}
+
+#button-text:hover{
+    color: white;
+}
